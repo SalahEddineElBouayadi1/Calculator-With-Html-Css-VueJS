@@ -1,0 +1,101 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.calculator {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 320px; /* عرض الآلة الحاسبة */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: #ffffff; /* خلفية الآلة الحاسبة */
+    position: relative; /* لإدارة الموقع بشكل أفضل */
+}
+
+input {
+    width: 100%;
+    padding: 20px;
+    font-size: 2em;
+    border: none;
+    background-color: #333; /* خلفية النص */
+    color: #fff; /* لون النص */
+    text-align: right;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc; /* خط تحت الـ input */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #f2f2f2; /* لون خلفية الأزرار */
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #f9f9f9; /* خلفية الأزرار */
+    color: #333; /* لون نص الأزرار */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-sizing: border-box;
+    border-radius: 5px; /* زوايا دائرية للأزرار */
+}
+
+button:hover {
+    background-color: #e0e0e0; /* تغيير اللون عند التحويم */
+}
+
+button:active {
+    background-color: #d0d0d0; /* تغيير اللون عند الضغط */
+    transform: scale(0.98); /* تأثير الضغط */
+}
+
+/* ألوان خاصة للأزرار العمليات */
+button.operator {
+    background-color: #f6a623; /* لون خلفية العمليات */
+    color: white; /* لون نص العمليات */
+}
+
+button.operator:hover {
+    background-color: #e59500; /* تغيير لون الخلفية عند التحويم */
+}
+
+button.operator:active {
+    background-color: #d68900; /* تغيير لون الخلفية عند الضغط */
+}
+
+/* لون خاص لزر "=" */
+button.equals {
+    background-color: #4caf50; /* لون خلفية زر "=" */
+    color: white; /* لون نص زر "=" */
+}
+
+button.equals:hover {
+    background-color: #45a049; /* تغيير لون الخلفية عند التحويم */
+}
+
+button.equals:active {
+    background-color: #388e3c; /* تغيير لون الخلفية عند الضغط */
+}
+
+button.clear {
+    background-color: #ff6f61; /* لون خلفية زر "C" */
+    color: white; /* لون نص زر "C" */
+    grid-column: span 4; /* يجعل زر "C" يمتد على كامل عرض الصف */
+}
+
+button.clear:hover {
+    background-color: #e55b50; /* تغيير اللون عند التحويم */
+}
+
+button.clear:active {
+    background-color: #d44e3f; /* تغيير اللون عند الضغط */
+}
